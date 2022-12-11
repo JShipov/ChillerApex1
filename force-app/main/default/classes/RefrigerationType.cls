@@ -1,0 +1,1 @@
+public enum RefrigerationType {R134, R12}
