@@ -29,3 +29,9 @@ Class ChillerBuilder is a generic builder and an abstract class. It was created 
 **Class SrewBuilder** and C**entrifugalBuilder** are a concrete builders of chillers and is a descendants of the ***abstract*** class **ChillerBuilder** and implements its abstract methods. 
 
 Class Director manages the process of creating products, stores a link to the builder, and produces our product sequentially step-by-step.
+
+
+Run.vpf page preview:
+
+<img width="1428" alt="Screenshot 2022-12-11 at 22 46 57" src="https://user-images.githubusercontent.com/107051542/206922724-11b3c43c-d5a8-4254-aa54-09d809f2df4a.png">
+
