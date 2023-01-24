@@ -1,35 +1,18 @@
 public class Run {
-    public Decimal getCoolingCapacity() {
+    public List<Chiller> chillers {get; set;}
+    public ChillerController() {
         Director director = new Director();
-        director.setBuilder(new ScrewBuilder());
-        Chiller chiller1 = director.BuildChiller();
-        chiller1.toString();
-        return chiller1.getCoolingCapacity();   
-    }
-    
-    
-    public Decimal getCompressorPower() {
-        Director director = new Director();
-        director.setBuilder(new ScrewBuilder());
-        Chiller chiller1 = director.BuildChiller();
-        chiller1.toString();
-        return chiller1.getCompressorPower();  
-    }
-    
-    public Decimal getEER() {
-        Director director = new Director();
-        director.setBuilder(new ScrewBuilder());
-        Chiller chiller1 = director.BuildChiller();
-        chiller1.toString();
-        return chiller1.getEER();  
-    }
-    
-    public RefrigerationType getRefrigerationType() {
-        Director director = new Director();
-        director.setBuilder(new ScrewBuilder());
-        Chiller chiller1 = director.BuildChiller();
-        chiller1.toString();
-        return chiller1.refrigerationType();  
+        ChillerBuilder screwBuilder = new ScrewBuilder();
+        ChillerBuilder centrifugalBuilder = new CentrifugalBuilder();
+        director.setBuilder(screwBuilder);
+        Chiller screwChiller = director.BuildChiller();
+        director.setBuilder(centrifugalBuilder);
+        Chiller centrifugalChiller = director.BuildChiller();
+        chillers = new List<Chiller>();
+        chillers.add(screwChiller);
+        chillers.add(centrifugalChiller);
+        chillers.add(screwChiller);
+        chillers.add(centrifugalChiller);
     }
     
 }
