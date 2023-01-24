@@ -13,7 +13,7 @@ public class Chiller {
     }
 
     public void setEER(Decimal EER) {
-        this.EER = EER;
+        this.EER = EER.setScale(2, RoundingMode.HALF_UP);
     }
 
     public void setRefrigerationType(RefrigerationType refrigerationType) {
@@ -34,15 +34,6 @@ public class Chiller {
     
     public RefrigerationType refrigerationType() {
         return refrigerationType;
-    }
-    
-    public List<String> write() {
-        List<String> values = new List<String>();
-        values.add(0, '' + this.coolingCapacity);
-        values.add(1, '' + this.compressorPower);
-        values.add(2, '' + this.EER);
-        values.add(3, '' + this.refrigerationType);
-        return values;
     }
    
 }
